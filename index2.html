@@ -5,9 +5,7 @@
 </head> 
 <body>
   <div id="app">
-    <p>Curso: {{ curso }} | {{ nomeDoInstrutor() }}</p>
-    <a v-bind:href="docs">Vuejs Links</a>
-    <p>Instrutor: <span v-text="instrutor"></span></p>
+    <p v-once>Nome um: {{ nome }}</p>
     <p>Nome teste: {{ getNome() }}</p>
   </div>
 
@@ -17,7 +15,7 @@
       el: '#app',
       data: {
         curso: 'VueJS Vamos 2022',
-        instrutor: 'Plinio',
+        instrutor: 'Plinio Alves',
         docs: 'https://vuejs.org/v2/guide/',
         nome: 'Pamela Otéro'
       },
@@ -27,6 +25,7 @@
           return this.instrutor;
         },
         getNome: function() {
+          this.nome = "Plínio"
           return this.nome;
         }
       }
