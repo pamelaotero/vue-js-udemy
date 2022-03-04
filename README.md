@@ -10,7 +10,7 @@ Vuejs é um frmework progressivo para construção de interfaces do usuário
 
 ### Vue é acessível e performático
 
-- Virtual Dom extremamnete rápido
+- Virtual Dom extremamente rápido
 - Esforço mínimo para otimizações
 
 
