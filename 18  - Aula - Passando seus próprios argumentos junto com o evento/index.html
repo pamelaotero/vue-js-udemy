@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Vue JS - Passando meus próprios argumentos no evento</title>
+  <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <input v-on:blur="exibirNome">
+    <p>Renderiza aqui: {{ nome }}</p>
+    
+    <label>Valor A</label>
+    <input v-on:blur="exibeValorA">
+    <br>
+    <label>Valor B</label>
+    <input v-on:blur="exibeValorB">
+    <p>A soma de {{ a }} com {{ b }} equivale a {{ soma(a,b) }}</p>
+
+  </div>
+
+  <script type="text/javascript">
+    new Vue({
+      el:'#app',
+      data: {
+        nome:'',
+        a: '',
+        b: ''
+      },
+
+      methods: {
+        exibirNome: function(event) {
+          this.nome = event.target.value
+        },
+
+        exibeValorA: function(event) {
+          // Convertendo de string para inteiro
+          this.a = parseInt(event.target.value)
+        },
+
+        exibeValorB: function(event) {
+          this.b = parseInt(event.target.value)
+        },
+
+        soma: function(a, b) {
+          return a + b
+        }
+      }
+    })
+  </script>
+</body>
+</html>
