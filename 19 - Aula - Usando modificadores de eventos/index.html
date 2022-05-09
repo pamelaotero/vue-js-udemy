@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vue JS - Passando meus próprios argumentos no evento</title>
+  <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+  <!-- Vue js oferece modificadores que alteração o comportamento padrao desses eventos -->
+</head>
+<body>
+  <div id="app">
+    <p v-on:click="onClick('p'), $event">
+      Curso de Vuejs
+      <button v-on:click="onClick('button'), $event">Clique</button>
+    </p>
+  </div>
+
+  <script type="text/javascript">
+    new Vue({
+      el: '#app',
+    })
+  </script>
+</body>
+</html>
